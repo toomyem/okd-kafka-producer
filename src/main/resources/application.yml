@@ -1,0 +1,13 @@
+---
+micronaut:
+  application:
+    name: kafka-producer
+
+  server:
+    host: 0.0.0.0
+    port: 12345
+
+---
+kafka:
+  bootstrap:
+    servers: 127.0.0.1:9092
