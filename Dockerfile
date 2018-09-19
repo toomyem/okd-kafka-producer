@@ -7,5 +7,5 @@ COPY pom.xml .
 RUN mvn package
 
 FROM openjdk:8u171-alpine3.7
-COPY --from=builder /app/target/kafka-producer*.jar /kafka-producer.jar
+COPY --from=builder /app/target/kafka-producer-0.1.jar /kafka-producer.jar
 CMD java ${JAVA_OPTS} -jar /kafka-producer.jar
